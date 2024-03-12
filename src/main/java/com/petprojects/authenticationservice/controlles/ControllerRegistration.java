@@ -24,8 +24,7 @@ public class ControllerRegistration {
             findEmailService.findEmail(userDTO.getUser_email());
             return "Пользователь с таким email уже существует";
         }catch (Exception exception) {
-            validationService.validation(userDTO.getUser_login(), userDTO.getUser_password(), userDTO.getUser_email());
+            return validationService.validation(userDTO.getUser_login(), userDTO.getUser_password(), userDTO.getUser_email());
         }
-        return "";
     }
 }

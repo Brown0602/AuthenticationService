@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class AuthenticationRepo implements AuthenticationService {
 
-    final private JdbcTemplate jdbcTemplate;
+    final JdbcTemplate jdbcTemplate;
 
     @Autowired
     public AuthenticationRepo(JdbcTemplate jdbcTemplate) {
